@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Connecting Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+    />
+    <link rel="icon" type="image/png" href="Airbrush-IMAGE-ENHANCER-1763378907666-1763378907666-Photoroom.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="hud panel">
+        <div class="brand" aria-label="LogoConnect">
+          <div class="brand-icon">
+            <img src="Airbrush-IMAGE-ENHANCER-1763378907666-1763378907666-Photoroom.png" alt="LogoConnect belgisi" />
+          </div>
+          <div class="brand-text">
+            <p class="brand-title">Connecting Game</p>
+            <p class="brand-tagline">Neon Tech Matching</p>
+          </div>
+        </div>
+        <div class="hud-left">
+          <p class="level">LEVEL <span id="levelValue">1</span></p>
+          <p class="score">
+            SCORE:
+            <span id="scoreValue">0</span>
+          </p>
+        </div>
+        <div class="progress-bar" aria-label="Progress">
+          <div id="progressFill"></div>
+        </div>
+        <div class="hud-right">
+          <div class="lives" aria-label="Lives">
+            <span class="life" data-life="1">❤</span>
+            <span class="life" data-life="2">❤</span>
+            <span class="life" data-life="3">❤</span>
+          </div>
+          <button id="hintBtn" class="icon-btn" aria-label="Hint">
+            💡
+            <span id="hintCount" class="badge">3</span>
+          </button>
+          <button id="shuffleBtn" class="icon-btn" aria-label="Shuffle">
+            🔁
+          </button>
+          <button id="pauseBtn" class="icon-btn" aria-label="Pause">
+            ⏸
+          </button>
+        </div>
+      </header>
+
+      <section class="stage panel">
+        <div class="stage-top">
+          <h1>Connencting Game</h1>
+          <div class="mini-stats">
+            <span>Pairs left: <strong id="pairsRemaining">0</strong></span>
+            <span>Moves: <strong id="moveCount">0</strong></span>
+          </div>
+        </div>
+
+        <div class="board-wrapper">
+          <div class="board-frame">
+            <div
+              id="board"
+              class="board"
+              role="grid"
+              aria-label="Logo connect board"
+            ></div>
+            <p id="statusMessage" class="status-banner" role="status"></p>
+          </div>
+        </div>
+      </section>
+
+      <button id="resetBtn" class="floating-btn" aria-label="Reset">
+        ↻
+      </button>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
+
